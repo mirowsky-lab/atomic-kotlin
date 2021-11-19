@@ -11,3 +11,7 @@ fun subtract(vararg  args: Int) {args.reduce { accumulator, item -> accumulator 
 fun randomRange(from: Int, to: Int): Int {
    return floor(Math.random() * to).toInt() + from
 }
+
+fun randomRangeLet(from: Int, to: Int): Int {
+   return Math.random() then ::floor then {it * 10 } then {it + 1} then {it.toInt()}
+}
