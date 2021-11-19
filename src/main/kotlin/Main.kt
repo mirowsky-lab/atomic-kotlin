@@ -1,31 +1,19 @@
-import javax.lang.model.element.Element
+import dev.mirowsky.sectionOne.controlFlowDeclaration
+import dev.mirowsky.sectionOne.randomRange
+import kotlin.math.floor
 
-fun add(vararg args: Int): Int = args.reduce {acc, next -> acc + next }
-
-
-fun main(args: Array<String>) {
-
-    println("Hello world")
-
-
-    val allTheNumbs = add(1, 2, 3)
+fun main(args: Array<String>)   {
 
 
 
-    List<Int>(10, init = {index -> index })
-    println(allTheNumbs)
+
+    for (index in 0 until 10) {
+
+        println(
+            randomRange(0, 5)
+        )
+
+    }
 
 
-    fun lambdaSumAnon(vararg args: Int): Int = args.reduce { acc, list -> acc + list }
-
-
-    val lambdaSum = {ars: List<Int> -> ars.reduce {acc, next ->  acc + next} }
-
-    val lambdaFoldSum = listOf(2, 3, 4).fold(0) { acc, i ->  acc + i }
-
-    println(lambdaSum(listOf(1, 2, 3)))
-
-    println(lambdaFoldSum)
-
-    println(lambdaSumAnon(10, 20, 30))
 }
