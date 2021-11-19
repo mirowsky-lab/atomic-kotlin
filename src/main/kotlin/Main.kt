@@ -8,10 +8,7 @@ fun main(args: Array<String>)   {
 
 
     for (index in 0 until 10) {
-
-        println(
-            randomRange(0, 6)
-        )
+        controlFlowDeclaration()
 
     }
 
