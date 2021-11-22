@@ -1,13 +1,22 @@
-import dev.mirowsky.sectionOne.JohnDoeFactory
-import dev.mirowsky.sectionOne.fold
+import dev.mirowsky.sectionOne.johnDoeFactory
+import java.util.concurrent.CompletableFuture
+import kotlin.coroutines.Continuation
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
+import kotlin.coroutines.suspendCoroutine
 
 fun main(args: Array<String>)   {
 
 
-    val (firstName, lastName, age) = JohnDoeFactory()
+    val (first, lastName, age) = johnDoeFactory()
 
 
-    println(firstName)
+
+    fun foo(): CompletableFuture<String> = CompletableFuture.supplyAsync {"foo"}
+
+
+
+    println(first)
     println(lastName)
     println(age)
 
