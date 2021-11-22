@@ -2,7 +2,7 @@ package dev.mirowsky.sectionTwo.visibility
 
 
 
-private var index = 0;
+private var index = 0
 
 
 private class Animal(val name: String)
