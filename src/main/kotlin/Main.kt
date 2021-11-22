@@ -1,13 +1,14 @@
-import dev.mirowsky.sectionOne.controlFlowDeclaration
-import dev.mirowsky.sectionOne.isEven
-import dev.mirowsky.sectionOne.randomRange
-import kotlin.math.floor
+import dev.mirowsky.sectionOne.JohnDoeFactory
+import dev.mirowsky.sectionOne.fold
 
 fun main(args: Array<String>)   {
 
 
-    val myList = listOf(1, 2, 3).fold(0) { acc, next -> acc + next }
+    val (firstName, lastName, age) = JohnDoeFactory()
 
-    println(myList)
+
+    println(firstName)
+    println(lastName)
+    println(age)
 
 }
